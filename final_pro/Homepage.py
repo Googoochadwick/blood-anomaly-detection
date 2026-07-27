@@ -21,11 +21,11 @@ st.image("final_pro/pages/smsmin.png", caption="Seaborn correlation heatmapped")
 st.markdown('''# Database Description
 The dataset that was used for this is Blood Cell Anomaly Detection 2025 from Kaggle''')
 st.image("final_pro/pages/kaggle.png", caption="https://www.kaggle.com/datasets/alitaqishah/blood-cell-anomaly-detection-2025")
-df = pd.read_csv("blood_cell_anomaly_detection.csv")
+df = pd.read_csv("final_pro/blood_cell_anomaly_detection.csv")
 
 st.code("""
 import pandas as pd
-df = pd.read_csv("blood_cell_anomaly_detection.csv")
+df = pd.read_csv("final_pro/blood_cell_anomaly_detection.csv")
 df
 """)
 st.dataframe(df)

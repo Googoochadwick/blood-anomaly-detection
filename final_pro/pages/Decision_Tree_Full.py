@@ -129,10 +129,10 @@ Before I choose the model to train this on, I first had to clean the data.
 ''')
 st.code("""
 import pandas as pd
-df = pd.read_csv("blood_cell_anomaly_detection.csv")
+df = pd.read_csv("final_pro/blood_cell_anomaly_detection.csv")
 df
 """)
-df = pd.read_csv("blood_cell_anomaly_detection.csv")
+df = pd.read_csv("final_pro/blood_cell_anomaly_detection.csv")
 st.dataframe(df)
 st.markdown('''The dataset has multiple columes that are of no use to the model. These consist of columes that
 compare this dataset findings to the findings of the cytodiffuse research paper''')
