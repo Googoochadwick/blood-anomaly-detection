@@ -16,11 +16,11 @@ st.markdown('''# Project Contents
 The project consists of 4 trained models, 2 on :rainbow[Decision Tree] and 2 on :rainbow[XGboost algorithem].
 
 We will also look into how we choose a :green[baseline model] and how we can spot :red[bad model behavior] using :rainbow[seaborn metrics].''')
-st.image(" final_pro/pages/smsmin.png", caption="Seaborn correlation heatmapped")
+st.image("final_pro/pages/smsmin.png", caption="Seaborn correlation heatmapped")
 
 st.markdown('''# Database Description
 The dataset that was used for this is Blood Cell Anomaly Detection 2025 from Kaggle''')
-st.image(" final_pro/pages/kaggle.png", caption="https://www.kaggle.com/datasets/alitaqishah/blood-cell-anomaly-detection-2025")
+st.image("final_pro/pages/kaggle.png", caption="https://www.kaggle.com/datasets/alitaqishah/blood-cell-anomaly-detection-2025")
 df = pd.read_csv(" blood_cell_anomaly_detection.csv")
 
 st.code("""

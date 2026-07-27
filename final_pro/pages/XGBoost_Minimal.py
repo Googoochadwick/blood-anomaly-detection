@@ -15,7 +15,7 @@ FEATURE_COLUMNS = [
 
 @st.cache_resource
 def get_model():
-    return joblib.load(" final_pro/pages/bloodXGBmin.joblib")
+    return joblib.load("final_pro/pages/bloodXGBmin.joblib")
 
 
 def predict_anomaly(model, values):

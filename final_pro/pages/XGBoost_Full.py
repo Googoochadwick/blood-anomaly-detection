@@ -8,7 +8,7 @@ import streamlit as st
 
 @st.cache_resource
 def get_model():
-    return joblib.load(" final_pro/pages/bloodXGBfull.joblib")
+    return joblib.load("final_pro/pages/bloodXGBfull.joblib")
 
 def predict_anomaly(model, values):
     input_df = pd.DataFrame([values], columns=[
@@ -133,7 +133,7 @@ A key phrase in this definition is _"piecewise constant approximation"_ Lets use
 understand decision tree.
 ''')
 
-st.image(" final_pro/pages/decisiontree.png", caption="Decision Tree graph from scikit-learn Documentation")
+st.image("final_pro/pages/decisiontree.png", caption="Decision Tree graph from scikit-learn Documentation")
 
 st.markdown('''The above graph plots decision tree regression for a :blue[max_depth = 2] and :green[max_depth = 5]
 
@@ -148,7 +148,7 @@ multiple flat regions, this is overfitting, and Decision tree is prone to overfi
 
 # XGBoost''')
 
-st.image(" final_pro/pages/ens.png", caption="Image from geeksforgeeks")
+st.image("final_pro/pages/ens.png", caption="Image from geeksforgeeks")
 
 st.markdown('''XGBoost takes advantage of :rainbow[ensemble learning], this is the act of combining the output of
 multiple models, in order to have more accurate and reliable results, even if the individual models are weak.
@@ -160,7 +160,7 @@ Ensemble Learning has 3 types
 
 XGBoost, as the name suggest uses :rainbow[boosting].''')
 
-st.image(" final_pro/pages/boost.png", caption="Image from geeksforgeeks")
+st.image("final_pro/pages/boost.png", caption="Image from geeksforgeeks")
 
 st.markdown('''The above diagram represents how boosting works. The predictions from the first model are used as training data for the next model and so on.
 

@@ -15,7 +15,7 @@ FEATURE_COLUMNS = [
 
 @st.cache_resource
 def get_model():
-    return joblib.load(" final_pro/pages/bloodminimal.joblib")
+    return joblib.load("final_pro/pages/bloodminimal.joblib")
 
 
 def predict_anomaly(model, values):
@@ -70,7 +70,7 @@ st.markdown('''# Solving for the number of fields
 To do so I first made a correlation matrix to check the correlation between the values anddddd.....
 # Interesting......''')
 
-st.image(" final_pro/pages/smsmax.png", caption="Seaborn correlation heatmapped")
+st.image("final_pro/pages/smsmax.png", caption="Seaborn correlation heatmapped")
 
 st.markdown('''This is a very :rainbow[interesting] heatmap
 
@@ -86,7 +86,7 @@ This is not enough to remove the fields, I needed more data to remove them.
 
 ---
 # :rainbow[Lets call a friend] (model)''')
-st.image(" final_pro/pages/caf.png", caption="Call a friend from who wants to be a millionare")
+st.image("final_pro/pages/caf.png", caption="Call a friend from who wants to be a millionare")
 
 st.markdown('''In the show who wants to be a millionare, contestants had an option to call a friend to ask them what the
 answer to their question could be, it can easily be assumed that their 
@@ -96,7 +96,7 @@ search it up.
 So how about we call our friend! The trained model can tell us the importance of the features used
 and how much they affect out model output.''')
 
-st.image(" final_pro/pages/featimp.png", caption="Feature Importance")
+st.image("final_pro/pages/featimp.png", caption="Feature Importance")
 
 st.markdown('''Looking at the chart above, you can see why I choose the values on the left.
 The values after nucleas area drop below < 0.1 with chromatin density being 0.05''')

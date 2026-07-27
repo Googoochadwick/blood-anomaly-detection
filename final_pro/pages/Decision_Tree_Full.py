@@ -8,7 +8,7 @@ import streamlit as st
 
 @st.cache_resource
 def get_model():
-    return joblib.load(" final_pro/pages/bloodfull.joblib")
+    return joblib.load("final_pro/pages/bloodfull.joblib")
 
 def predict_anomaly(model, values):
     input_df = pd.DataFrame([values], columns=[
