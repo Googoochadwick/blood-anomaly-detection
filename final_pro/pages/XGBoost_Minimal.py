@@ -4,6 +4,9 @@ import joblib
 import pandas as pd
 import streamlit as st
 
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "bloodXGBmin.joblib"
+
 FEATURE_COLUMNS = [
     "circularity",
     "cell_area_px",
@@ -15,7 +18,7 @@ FEATURE_COLUMNS = [
 
 @st.cache_resource
 def get_model():
-    return joblib.load("/home/daxter/code/digipodium/classifier/final_pro/pages/bloodXGBmin.joblib")
+    return joblib.load(MODEL_PATH)
 
 
 def predict_anomaly(model, values):
