@@ -5,17 +5,10 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-BASE_DIR = Path(__file__).resolve().parent
-DATA_PATH = next(
-    (path for path in (BASE_DIR / "blood_cell_anomaly_detection.csv", BASE_DIR.parent / "blood_cell_anomaly_detection.csv") if path.exists()),
-    BASE_DIR.parent / "blood_cell_anomaly_detection.csv",
-)
-MODEL_PATH = BASE_DIR / "bloodfull.joblib"
-
 
 @st.cache_resource
 def get_model():
-    return joblib.load(MODEL_PATH)
+    return joblib.load(" final_pro/pages/bloodfull.joblib")
 
 def predict_anomaly(model, values):
     input_df = pd.DataFrame([values], columns=[
@@ -139,7 +132,7 @@ import pandas as pd
 df = pd.read_csv("blood_cell_anomaly_detection.csv")
 df
 """)
-df = pd.read_csv(DATA_PATH)
+df = pd.read_csv(" blood_cell_anomaly_detection.csv")
 st.dataframe(df)
 st.markdown('''The dataset has multiple columes that are of no use to the model. These consist of columes that
 compare this dataset findings to the findings of the cytodiffuse research paper''')
