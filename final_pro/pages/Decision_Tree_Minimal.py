@@ -69,7 +69,7 @@ st.dataframe(df[['circularity',
 'lobularity_score',              
 'granularity_score',             
 'nucleus_area_pct',
-'anomaly_label', ]].sample(5))
+'anomaly_label', ]].head(5))
 st.markdown('---') 
 st.markdown('''# Solving for the number of fields 
 
