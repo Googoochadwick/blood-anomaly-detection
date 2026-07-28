@@ -64,12 +64,12 @@ if st.sidebar.button("Predict"):
 
     st.info(f"Model confidence: {probability * 100:.2f}%")
 
-st.dataframe((df[['circularity',                   
+st.dataframe(df[['circularity',                   
 'cell_area_px',                 
 'lobularity_score',              
 'granularity_score',             
 'nucleus_area_pct',
-'anomaly_label', ]]).sample(5))
+'anomaly_label', ]].sample(5))
 st.markdown('''
 ---
 
