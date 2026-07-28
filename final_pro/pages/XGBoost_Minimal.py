@@ -11,7 +11,7 @@ FEATURE_COLUMNS = [
     "granularity_score",
     "nucleus_area_pct",
 ]
-
+df = pd.read_csv("final_pro/blood_cell_anomaly_detection.csv")
 
 @st.cache_resource
 def get_model():

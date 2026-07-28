@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
+df = pd.read_csv("final_pro/blood_cell_anomaly_detection.csv")
 
 @st.cache_resource
 def get_model():
@@ -116,7 +117,7 @@ if st.sidebar.button("Predict"):
         st.success("Prediction: Normal (anomaly_label = 0)")
 
     st.info(f"Model confidence: {probability * 100:.2f}%")
-    
+st.dataframe(df.drop(df.columns[[0,1,3,28,29,30,31,32,33,34,35]], axis=1))    
 st.markdown('---') 
 st.markdown('''# Immediate concerns
 Once we press predict, we can see with the default prediction values, while it predicted correctly, the confidence is 100%, this usually isnt a big
@@ -140,7 +141,7 @@ st.code("""
 df = df.drop(df.columns[[0,28,29,30,31,32,33,34,35]], axis=1)
 df
 """)
-st.dataframe(df.drop(df.columns[[0,28,29,30,31,32,33,34,35]], axis=1))
+st.dataframe((df.drop(df.columns[[0,28,29,30,31,32,33,34,35]], axis=1)).sample(5))
 st.markdown('''The above are all the values that are of use to the model.''')
 
 st.markdown('''# Model selection
