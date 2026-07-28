@@ -4,6 +4,7 @@ import joblib
 import pandas as pd
 import streamlit as st
 
+df = pd.read_csv("final_pro/blood_cell_anomaly_detection.csv")
 FEATURE_COLUMNS = [
     "circularity",
     "cell_area_px",
@@ -63,6 +64,12 @@ if st.sidebar.button("Predict"):
 
     st.info(f"Model confidence: {probability * 100:.2f}%")
 
+st.dataframe((df[['circularity',                   
+'cell_area_px',                 
+'lobularity_score',              
+'granularity_score',             
+'nucleus_area_pct',
+'anomaly_label', ]]).sample(5))
 st.markdown('''
 ---
 

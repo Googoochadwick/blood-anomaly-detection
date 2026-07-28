@@ -117,7 +117,7 @@ if st.sidebar.button("Predict"):
         st.success("Prediction: Normal (anomaly_label = 0)")
 
     st.info(f"Model confidence: {probability * 100:.2f}%")
-st.dataframe(df.drop(df.columns[[0,1,3,28,29,30,31,32,33,34,35]], axis=1))    
+st.dataframe((df.drop(df.columns[[0,28,29,30,31,32,33,34,35]], axis=1)).sample(5))
 st.markdown('---') 
 st.markdown('''# Immediate concerns
 Once we press predict, we can see with the default prediction values, while it predicted correctly, the confidence is 100%, this usually isnt a big
@@ -134,7 +134,7 @@ df = pd.read_csv("final_pro/blood_cell_anomaly_detection.csv")
 df
 """)
 df = pd.read_csv("final_pro/blood_cell_anomaly_detection.csv")
-st.dataframe(df)
+st.dataframe((df.drop(df.columns[[0,28,29,30,31,32,33,34,35]], axis=1)).sample(5))
 st.markdown('''The dataset has multiple columes that are of no use to the model. These consist of columes that
 compare this dataset findings to the findings of the cytodiffuse research paper''')
 st.code("""
