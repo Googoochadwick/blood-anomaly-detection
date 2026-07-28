@@ -117,7 +117,7 @@ if st.sidebar.button("Predict"):
         st.success("Prediction: Normal (anomaly_label = 0)")
 
     st.info(f"Model confidence: {probability * 100:.2f}%")
-st.dataframe((df.drop(df.columns[[0,28,29,30,31,32,33,34,35]], axis=1)).head(5))
+st.dataframe((df.drop(df.columns[[0,1,3,28,29,30,31,32,33,34,35]], axis=1)).head(5))
 st.markdown('---') 
 st.markdown('''# Immediate concerns
 Once we press predict, we can see with the default prediction values, while it predicted correctly, the confidence is 100%, this usually isnt a big
