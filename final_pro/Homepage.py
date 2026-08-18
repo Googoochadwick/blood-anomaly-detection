@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(
-    page_title="Blood Anomoly Detection",
+    page_title="Blood Anomaly Detection",
     page_icon='🩸',
 )
-st.title("Blood Anomoly Detection")
+st.title("Blood Anomaly Detection")
 st.markdown("---")
 st.markdown('''# Project Description
 The blood is the transport system of the body, if affected, it can be dangerous and sometimes even lethal.
